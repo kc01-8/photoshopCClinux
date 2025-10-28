@@ -218,11 +218,9 @@ function download_component() {
 
             elif [ "$curlpkg" == "true" ];then
                 show_message "using curl to download $4"
-                # This is the line that has been fixed
                 curl -L "$3" -o "$1"
             else
                 show_message "using wget to download $4"
-                # Wget follows redirects by default, but -O is still safer
                 wget --no-check-certificate "$3" -O "$1"
                 
                 if [ $? -eq 0 ];then
