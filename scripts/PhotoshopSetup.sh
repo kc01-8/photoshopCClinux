@@ -12,7 +12,7 @@ function main() {
 
     #make sure wine and winetricks package is already installed
     package_installed wine
-    package_installed wine64
+    package_installed_w64 wine64
     package_installed md5sum
     package_installed winetricks
 
