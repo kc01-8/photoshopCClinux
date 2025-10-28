@@ -84,7 +84,7 @@ If no options are given the installer script will use the default path
 
 <div align="center" class="tip" markdown="1" style>
 
-![setup-screenshot](images/setup-screenshot.png)
+![setup-screenshot](https://github.com/kc01-8/photoshopCClinux/blob/master/images/setup-screenshot.png?raw=true)
 </div>
 
 During installation pay attention to the script messages.
