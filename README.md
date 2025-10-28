@@ -41,13 +41,13 @@ sudo dpkg --add-architecture i386 && sudo mkdir -p /etc/apt/keyrings && sudo wge
 
 3. Enough storage in your `/home` partition for the install: `5G`
 
-`1G` will be freed after installation. You can also install photoshop in different directory
+`1G` will be freed after installation 
 
 4. Make sure you have an internet connection to download photoshop and its components
 
 ## :computer: Installation
 
-The installer scripts use a virtual drive of wine and makes a new `winprefix` for photoshop
+The installer scripts use a virtual drive in wine and makes a new `winprefix` for photoshop
 
 1. Clone the repository with this command:
 ```bash
@@ -61,7 +61,7 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-3. (optional) Use `-d` to specify the installation path, and `-c` for the cache directory.
+3. (optional) Use `-d` to specify the installation path, and `-c` for the cache directory
 for example:
 ```bash
 ./PhotoshopSetup.sh -d /mnt/myfiles/photoshop
@@ -70,8 +70,8 @@ or
 ```bash
 ./PhotoshopSetup.sh -d /mnt/myfiles/photoshop -c /mnt/cache
 ```
-If no options are given, the installer script will use the default path, 
-The uninstaller script and others will detect your custom path so there is no problem,
+If no options are given the installer script will use the default path
+The uninstaller script and others will detect your custom path so there is no problem
 
 
 <div align="center" class="tip" markdown="1" style>
@@ -79,11 +79,12 @@ The uninstaller script and others will detect your custom path so there is no pr
 ![setup-screenshot](images/setup-screenshot.png)
 </div>
 
-During installation pay attention to the script messages
+During installation pay attention to the script messages.
 
-> **NOTE :** make sure OS version in wine is on windows 7
+> **NOTE :** Arch users do not need wine64 package
+> **NOTE :** Do not change OS version in wine from windows 7
 
-installer script use `winetricks` to install necessary components
+Installer script uses `winetricks` to install necessary components
 
 ## :wine_glass: wineprefix Configuration
 To configure the wineprefix of photoshop you can use `winecfg.sh` script:
