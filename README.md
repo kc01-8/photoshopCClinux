@@ -6,7 +6,7 @@
 ![wine version](https://img.shields.io/badge/wine-%E2%96%B29.0-red) ![Tested on arch](https://img.shields.io/badge/Tested%20on-Arch-brightgreen) ![GitHub stars](https://img.shields.io/github/stars/kc01-8/photoshopCClinux) ![rep size](https://img.shields.io/github/repo-size/gictorbit/photoshopCClinux) ![bash](https://img.shields.io/badge/bash-5.0-yellowgreen)
 </div>
 
-# Photoshop CC v19 installer for Linux
+# Photoshop CC 2018 installer for Linux
 This bash script installs Photoshop CC 2018 on your Linux machine using wine behind the scenes
 and sets up some necessary components up for the best performance AND IT ACTUALLY WORKS!
 
