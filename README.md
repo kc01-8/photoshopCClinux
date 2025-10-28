@@ -41,8 +41,7 @@ sudo dpkg --add-architecture i386 && sudo mkdir -p /etc/apt/keyrings && sudo wge
 
 3. Enough storage in your `/home` partition for the install: `5G`
 
-`1G` will be free after installation
-You can also install photoshop in different directory
+`1G` will be freed after installation. You can also install photoshop in different directory
 
 4. Make sure you have an internet connection to download photoshop and its components
 
