@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 if [ $# -ne 0 ];then
-    echo "I have no parameters just run the script without arguments"
+    echo "I have no parameters. Run the script without arguments."
     exit 1
 fi
 
