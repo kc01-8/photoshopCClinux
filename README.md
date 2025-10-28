@@ -21,9 +21,9 @@ and sets some necessary components up for the best performance
 * works on any Linux distribution
 
 ## :warning: Requirements
-1- use a 64bit edition of your distro
+1- A 64bit Operating System
 
-2- Prequisite packages
+2- The following packages packages
 * `wine`
 * `wine64`
 * `winetricks`
