@@ -39,24 +39,24 @@ main() {
         echo "$SCR_PATH"
         rm "$ENTRY_PATH" || error2 "Couldn't remove desktop entry"
     else
-        echo "desktop entry Not Found!"
+        echo "Desktop entry Not Found!"
     fi
 
     #delete cache directoy
     if [ -d "$CACHE_PATH" ];then
         echo "--------------------------------"
-        echo "all downloaded components are in cache directory and you can use them for photoshop installation next time without wasting internet traffic"
+        echo "Downloadeds are cached, and you can use them to reinstall photoshop without redownloading."
         echo -e "your cache directory is \033[1;36m$CACHE_PATH\e[0m"
         echo "--------------------------------"
-        ask_question "would you delete cache directory?" "N"
+        ask_question "Delete cache directory?" "N"
         if [ "$result" == "yes" ];then
-            rm -rf "$CACHE_PATH" || error2 "couldn't remove cache directory"
-            show_message2 "cache directory removed."
+            rm -rf "$CACHE_PATH" || error2 "Couldn't remove cache directory"
+            show_message2 "Cache directory removed."
         else
-            echo "nice, you can use downloaded data later for photoshop installation"
+            echo "You can use cached downloads later to install photoshop"
         fi
     else
-        echo "cache directory Not Found!"    
+        echo "Cache directory Not Found!"    
     fi
 
 }
