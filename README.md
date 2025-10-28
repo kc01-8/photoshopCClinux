@@ -12,7 +12,7 @@ and sets some necessary components up for the best performance
 
 ## :rocket: Features
 * downloads necessary components and installs them (`vcrun`, `atmlib`, `msxml`...)
-* downloads `photoshop.exe` installer
+* downloads *WORKING* `photoshop.exe` installer
 * creates photoshop command and a desktop entry
 * wine dark mode
 * supports graphic cards like (`intel`, `Nvidia`)
@@ -23,7 +23,7 @@ and sets some necessary components up for the best performance
 ## :warning: Requirements
 1- use a 64bit edition of your distro
 
-2-make sure the following packages are already installed on your Linux distro
+2- Prequisite packages
 * `wine`
 * `wine64`
 * `winetricks`
@@ -137,6 +137,6 @@ chmod +x uninstaller.sh
 
 
 ## :bookmark: License
-![GitHub](https://img.shields.io/github/license/Gictorbit/photoshopCClinux?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/kc01-8/photoshopCClinux?style=for-the-badge)
 
 
