@@ -56,8 +56,9 @@ function main() {
     sleep 3
     install_photoshopSE
     sleep 5
-    
-    replacement
+
+    #dead link
+    #replacement
 
     if [ -d $RESOURCES_PATH ];then
         show_message "deleting resources folder"
