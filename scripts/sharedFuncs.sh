@@ -38,7 +38,7 @@ function package_installed_w64() {
         if [ "$pkginstalled" -eq 0 ];then
             show_message "package\033[1;36m $1\e[0m is installed..."
         else
-            warning "package\033[1;33m $1\e[0m is not installed.\nPlease make sure it's already installed. \nThis does not, however, apply to Arch Linux, which merged wine and wine64 into one package.\nIf you use Arch then continue."
+            warning "package\033[1;33m $1\e[0m is not installed.\nPlease make sure it's already installed. \nThis does not, however, apply to Arch Linux, which merged wine and wine64 into one package.\nIf you use Arch then make a symlink between wine and wine64, and continue.\nsudo ln -sf /usr/bin/wine /usr/bin/wine64"
             ask_question "Continue?" "Y"
             if [ "$question_result" == "no" ];then
                 echo "exit..."
