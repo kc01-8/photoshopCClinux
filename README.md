@@ -37,13 +37,13 @@ sudo pacman -S wine winetricks
 Or for Ubuntu:
 ```bash
 sudo dpkg --add-architecture i386 && sudo mkdir -p /etc/apt/keyrings && sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key && sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/$(lsb_release -sc)/winehq-$(lsb_release -sc).sources && sudo apt update && sudo apt install -y --install-recommends winehq-stable winetricks
-``` 
+```
+
 
 3. Enough storage in your `/home` partition for the install: `5G`
 
 `1G` will be freed after installation 
 
-4. Make sure you have an internet connection to download photoshop and its components
 
 ## :computer: Installation
 
@@ -115,15 +115,15 @@ Photoshop uses the `GPU` to process these tools so before using these tools make
 <details>
 <summary>:camera: Adobe Camera Raw</summary>
 
-Another useful adobe software is `camera raw` if you want to work with it beside photoshop you must install it separately to do this, after photoshop installation run `cameraRawInstaller.sh` script with commands below:
+`camera raw` install:
 ```bash
 chmod +x cameraRawInstaller.sh
 ./cameraRawInstaller.sh
 ```
-Then restart photoshop.you can open it from 
+Restart photoshop and open it from:
 `Edit >>Preferences >> Camera Raw`
 
-> **_NOTE1:_** The size of camera raw installation file is about 400MB
+> **_NOTE1:_** The size of camera raw installation file is about 400M
 
 
 > **_NOTE2:_** Camera raw performance depends on your graphic card driver and its configuration
@@ -138,7 +138,7 @@ chmod +x uninstaller.sh
 ./uninstaller.sh
 ```
 ---
-Forked from [Gictorbit/photoshopCClinux](https://github.com/Gictorbit/photoshopCClinux.git)
+Forked from the abandoned [Gictorbit/photoshopCClinux](https://github.com/Gictorbit/photoshopCClinux.git)
 
 ## :bookmark: License
 ![GitHub](https://img.shields.io/github/license/kc01-8/photoshopCClinux?style=for-the-badge)
