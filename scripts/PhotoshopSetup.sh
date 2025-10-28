@@ -24,6 +24,9 @@ function main() {
     
     #export necessary variable for wine
     export_var
+
+    show_message "Setting Wine prefix to Windows 7..."
+    winetricks win7
     
     #config wine prefix and install mono and gecko automatic
     echo -e "\033[1;93mInstall Mono and Gecko packages then click on OK button. Do not change Windows version from Windows 7.\e[0m"
