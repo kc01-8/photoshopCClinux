@@ -73,6 +73,8 @@ function main() {
     sleep 30
 }
 
+#dead link, replacement function deprecated... not sure what it even does
+:` 
 function replacement() {
     local filename="replacement.tgz"
     local filemd5="6441a8e77c082897a99c2b7b588c9ac4"
@@ -96,27 +98,30 @@ function replacement() {
     show_message "replace component compeleted..."
     unset filename filemd5 filelink filepath
 }
+`
 
 function install_photoshopSE() {
     local filename="CC 2018 Portable_x64.exe"
     local filemd5="9dbe17dc8ad800c079798aa55bb9a20c"
     local filelink="https://archive.org/download/cc-2018-portable-x-64/CC%202018%20Portable_x64.exe"
-    # local filelink="http://127.0.0.1:8080/photoshopCC-V19.1.6-2018x64.tgz"
     local filepath="$CACHE_PATH/$filename"
 
     download_component "$filepath" "$filemd5" "$filelink" "$filename"
 
-    echo "===============| photoshop CC v19 |===============" >> "$SCR_PATH/wine-error.log"
-    show_message "install photoshop..."
-    show_message "\033[1;33mPlease don't change default Destination Folder\e[0m"
+    echo "===============| Photoshop CC 2018 |===============" >> "$SCR_PATH/wine-error.log"
+    show_message "installing photoshop..."
+    show_message "\033[1;33mA 7zip window will open. Do not change the default extraction location.\e[0m"
 
-    wine64 "$filepath" &>> "$SCR_PATH/wine-error.log" || error "sorry something went wrong during photoshop installation"
+    wine "$filepath" &>> "$SCR_PATH/wine-error.log"
+
+    show_message "Moving Photoshop files into the Wine prefix..."
+    mv "$CACHE_PATH/Photoshop19" "$WINE_PREFIX/drive_c/PhotoshopCC2018" || error "Failed to move extracted files!"
     
     show_message "removing useless helper.exe plugin to avoid errors"
-    rm "$WINE_PREFIX/drive_c/users/$USER/PhotoshopSE/Required/Plug-ins/Spaces/Adobe Spaces Helper.exe"
+    rm "$WINE_PREFIX/drive_c/PhotoshopCC2018/Required/Plug-ins/Spaces/Adobe Spaces Helper.exe"
 
     notify-send "Photoshop CC" "photoshop installed successfully" -i "photoshop"
-    show_message "photoshopCC V19 x64 installed..."
+    show_message "Photoshop CC 2018 x64 installed..."
     unset filename filemd5 filelink filepath
 }
 
