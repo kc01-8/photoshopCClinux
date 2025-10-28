@@ -71,7 +71,6 @@ or
 ./PhotoshopSetup.sh -d /mnt/myfiles/photoshop -c /mnt/cache
 ```
 If no options are given the installer script will use the default path
-The uninstaller script and others will detect your custom path so there is no problem
 
 
 <div align="center" class="tip" markdown="1" style>
