@@ -137,7 +137,8 @@ To uninstall photoshop you can use the uninstaller script with commands below
 chmod +x uninstaller.sh
 ./uninstaller.sh
 ```
-
+---
+Forked from ![Gictorbit/photoshopCClinux](https://github.com/Gictorbit/photoshopCClinux.git)
 
 ## :bookmark: License
 ![GitHub](https://img.shields.io/github/license/kc01-8/photoshopCClinux?style=for-the-badge)
