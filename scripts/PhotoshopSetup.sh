@@ -94,23 +94,19 @@ function replacement() {
 }
 
 function install_photoshopSE() {
-    local filename="photoshopCC-V19.1.6-2018x64.tgz"
-    local filemd5="b63f6ed690343ee12b6195424f94c33f"
-    local filelink="https://victor.poshtiban.io/p/gictor/photoshopCC/photoshopCC-V19.1.6-2018x64.tgz"
+    local filename="CC 2018 Portable_x64.exe"
+    local filemd5="9dbe17dc8ad800c079798aa55bb9a20c"
+    local filelink="https://archive.org/download/cc-2018-portable-x-64/CC%202018%20Portable_x64.exe"
     # local filelink="http://127.0.0.1:8080/photoshopCC-V19.1.6-2018x64.tgz"
     local filepath="$CACHE_PATH/$filename"
 
     download_component $filepath $filemd5 $filelink $filename
 
-    mkdir "$RESOURCES_PATH/photoshopCC"
-    show_message "extract photoshop..."
-    tar -xzf "$filepath" -C "$RESOURCES_PATH/photoshopCC"
-
     echo "===============| photoshop CC v19 |===============" >> "$SCR_PATH/wine-error.log"
     show_message "install photoshop..."
     show_message "\033[1;33mPlease don't change default Destination Folder\e[0m"
 
-    wine64 "$RESOURCES_PATH/photoshopCC/photoshop_cc.exe" &>> "$SCR_PATH/wine-error.log" || error "sorry something went wrong during photoshop installation"
+    wine64 "$filepath" &>> "$SCR_PATH/wine-error.log" || error "sorry something went wrong during photoshop installation"
     
     show_message "removing useless helper.exe plugin to avoid errors"
     rm "$WINE_PREFIX/drive_c/users/$USER/PhotoshopSE/Required/Plug-ins/Spaces/Adobe Spaces Helper.exe"
