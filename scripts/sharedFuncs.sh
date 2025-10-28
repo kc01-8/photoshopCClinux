@@ -14,8 +14,32 @@ function package_installed() {
         if [ "$pkginstalled" -eq 0 ];then
             show_message "package\033[1;36m $1\e[0m is installed..."
         else
-            warning "package\033[1;33m $1\e[0m is not installed.\nplease make sure it's already installed"
-            ask_question "would you continue?" "N"
+            warning "package\033[1;33m $1\e[0m is not installed.\nPlease make sure it's already installed."
+            ask_question "Continue?" "N"
+            if [ "$question_result" == "no" ];then
+                echo "exit..."
+                exit 5
+            fi
+        fi
+    fi
+}
+
+function package_installed_w64() {
+    which $1 &> /dev/null
+    local pkginstalled="$?"
+
+    if [ "$2" == "summary" ];then
+        if [ "$pkginstalled" -eq 0 ];then
+            echo "true"
+        else
+            echo "false"
+        fi
+    else    
+        if [ "$pkginstalled" -eq 0 ];then
+            show_message "package\033[1;36m $1\e[0m is installed..."
+        else
+            warning "package\033[1;33m $1\e[0m is not installed.\nPlease make sure it's already installed. \nThis does not, however, apply to Arch Linux, which merged wine and wine64 into one package.\nIf you use Arch then continue."
+            ask_question "Continue?" "Y"
             if [ "$question_result" == "no" ];then
                 echo "exit..."
                 exit 5
