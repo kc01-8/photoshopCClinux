@@ -192,16 +192,16 @@ function download_component() {
     local tout=0
     while true;do
         if [ $tout -ge 3 ];then
-            error "sorry something went wrong during download $4"
+            error "sorry something went wrong during download \"$4\""
         fi
-        if [ -f $1 ];then
-            local FILE_ID=$(md5sum $1 | cut -d" " -f1)
-            if [ "$FILE_ID" == $2 ];then
+        if [ -f "$1" ];then
+            local FILE_ID=$(md5sum "$1" | cut -d" " -f1)
+            if [ "$FILE_ID" == "$2" ];then
                 show_message "\033[1;36m$4\e[0m detected"
                 return 0
             else
                 show_message "md5 is not match"
-                rm $1 
+                rm "$1" 
             fi
         else   
             show_message "downloading $4 ..."
@@ -210,7 +210,7 @@ function download_component() {
             
             if [ "$ariapkg" == "true" ];then
                 show_message "using aria2c to download $4"
-                aria2c -c -x 8 -d "$CACHE_PATH" -o $4 $3
+                aria2c -c -x 8 --dir="$CACHE_PATH" --out="$4" "$3"
                 
                 if [ $? -eq 0 ];then
                     notify-send "Photoshop CC" "$4 download completed" -i "download"
@@ -218,10 +218,10 @@ function download_component() {
 
             elif [ "$curlpkg" == "true" ];then
                 show_message "using curl to download $4"
-                curl $3 -o $1
+                curl "$3" -o "$1"
             else
                 show_message "using wget to download $4"
-                wget --no-check-certificate "$3" -P "$CACHE_PATH"
+                wget --no-check-certificate "$3" -O "$1"
                 
                 if [ $? -eq 0 ];then
                     notify-send "Photoshop CC" "$4 download completed" -i "download"
