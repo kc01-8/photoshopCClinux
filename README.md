@@ -25,7 +25,7 @@ and sets up some necessary components up for the best performance AND IT ACTUALL
 
 2. The following packages packages
 * `wine`
-* `wine64`
+* `wine64` (non arch users)
 * `winetricks`
 * `md5sum`
 
