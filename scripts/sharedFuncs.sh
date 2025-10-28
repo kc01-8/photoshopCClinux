@@ -192,7 +192,7 @@ function download_component() {
     local tout=0
     while true;do
         if [ $tout -ge 3 ];then
-            error "sorry something went wrong during download \"$4\""
+            error "Something went wrong during the download \"$4\""
         fi
         if [ -f "$1" ];then
             local FILE_ID=$(md5sum "$1" | cut -d" " -f1)
@@ -218,9 +218,11 @@ function download_component() {
 
             elif [ "$curlpkg" == "true" ];then
                 show_message "using curl to download $4"
-                curl "$3" -o "$1"
+                # This is the line that has been fixed
+                curl -L "$3" -o "$1"
             else
                 show_message "using wget to download $4"
+                # Wget follows redirects by default, but -O is still safer
                 wget --no-check-certificate "$3" -O "$1"
                 
                 if [ $? -eq 0 ];then
