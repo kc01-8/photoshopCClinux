@@ -44,7 +44,7 @@ sudo dpkg --add-architecture i386 && sudo mkdir -p /etc/apt/keyrings && sudo wge
 
 You can install photoshop in different directory
 
-4. Make sure you have an internet connection and about 200mb traffic to download photoshop and its components
+4. Make sure you have an internet connection and 294.6M traffic to download photoshop and its components
 
 ## :computer: Installation
 
