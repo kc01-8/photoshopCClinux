@@ -103,7 +103,7 @@ function install_photoshopSE() {
     # local filelink="http://127.0.0.1:8080/photoshopCC-V19.1.6-2018x64.tgz"
     local filepath="$CACHE_PATH/$filename"
 
-    download_component $filepath $filemd5 $filelink $filename
+    download_component "$filepath" "$filemd5" "$filelink" "$filename"
 
     echo "===============| photoshop CC v19 |===============" >> "$SCR_PATH/wine-error.log"
     show_message "install photoshop..."
