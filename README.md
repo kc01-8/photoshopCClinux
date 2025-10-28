@@ -39,13 +39,12 @@ Or for Ubuntu:
 sudo dpkg --add-architecture i386 && sudo mkdir -p /etc/apt/keyrings && sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key && sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/$(lsb_release -sc)/winehq-$(lsb_release -sc).sources && sudo apt update && sudo apt install -y --install-recommends winehq-stable winetricks
 ``` 
 
-3. Enough storage in your `/home` partition: `5G`
+3. Enough storage in your `/home` partition for the install: `5G`
 
-1G will be free after installation
+`1G` will be free after installation
+You can also install photoshop in different directory
 
-You can install photoshop in different directory
-
-4. Make sure you have an internet connection and 294.6M traffic to download photoshop and its components
+4. Make sure you have an internet connection to download photoshop and its components
 
 ## :computer: Installation
 
