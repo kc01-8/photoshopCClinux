@@ -52,7 +52,7 @@ The installer scripts use a virtual drive of wine and makes a new `winprefix` fo
 
 1. Clone the repository with this command:
 ```bash
-git clone https://github.com/Gictorbit/photoshopCClinux.git
+git clone https://github.com/kc01-8/photoshopCClinux.git
 cd photoshopCClinux
 ```
 2. Run `setup.sh` script
