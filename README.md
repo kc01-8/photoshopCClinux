@@ -139,4 +139,4 @@ chmod +x uninstaller.sh
 ## :bookmark: License
 ![GitHub](https://img.shields.io/github/license/Gictorbit/photoshopCClinux?style=for-the-badge)
 
----
+
