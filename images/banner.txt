@@ -1,4 +1,4 @@
-                     ┏━━━━━━━━━━━━━━━━━━━━━━━━━┫ Photoshop CC Installer ┣━━━━━━━━━━━━━━━━━━━━━━━━┓
+                     ┏━━━━━━━━━━━━━━━━━┫ Photoshop CC Installer: Just Works Edition ┣━━━━━━━━━━━━┓
                      ┃                                                                           ┃
   ███████████████████████████                                                                    ┃
   ██                       ██      1- Install photoshop CC                                       ┃
@@ -13,4 +13,4 @@
   ██                       ██                                                                    ┃
   ███████████████████████████                                                                    ┃
                      ┃                                                                           ┃
-                     ┗━━━━━━━━━━━━━━━┫ https://github.com/Gictorbit/photoshopCClinux ┣━━━━━━━━━━━┛
+                     ┗━━━━━━━━━━━━━━━━━┫ https://github.com/kc01-8/photoshopCClinux ┣━━━━━━━━━━━━┛
