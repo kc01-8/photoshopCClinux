@@ -83,8 +83,6 @@ During installation pay attention to the script messages.
 
 > **NOTE :** Arch users do not need the wine64 package. Do not change OS version in wine from windows 7.
 
-Installer script uses `winetricks` to install necessary components
-
 ## :wine_glass: wineprefix Configuration
 To configure the wineprefix of photoshop you can use `winecfg.sh` script:
 ```bash
