@@ -48,24 +48,26 @@ sudo dpkg --add-architecture i386 && sudo mkdir -p /etc/apt/keyrings && sudo wge
 ## :computer: Installation
 
 The installer scripts use a virtual drive in wine and makes a new `winprefix` for photoshop
+0. For Arch users _only_, symlink wine64 to new wine
+
+```
+sudo ln -sf /usr/bin/wine /usr/bin/wine64
+```
 
 1. Clone the repository with this command:
 ```bash
 git clone https://github.com/kc01-8/photoshopCClinux.git
 cd photoshopCClinux
 ```
-2. For Arch users only, symlink wine64 to new wine
 
-`sudo ln -sf /usr/bin/wine /usr/bin/wine64`
-
-3. Run `setup.sh` script
+2. Run `setup.sh` script
 
 ```bash
 chmod +x setup.sh
 ./setup.sh
 ```
 
-4. (optional) Use `-d` to specify the installation path, and `-c` for the cache directory
+3. (optional) Use `-d` to specify the installation path, and `-c` for the cache directory
 for example:
 ```bash
 ./PhotoshopSetup.sh -d /mnt/myfiles/photoshop
