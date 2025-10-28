@@ -48,11 +48,14 @@ sudo dpkg --add-architecture i386 && sudo mkdir -p /etc/apt/keyrings && sudo wge
 ## :computer: Installation
 
 The installer scripts use a virtual drive in wine and makes a new `winprefix` for photoshop
+
 0. For Arch users _only_, symlink wine64 to new wine
 
 ```
 sudo ln -sf /usr/bin/wine /usr/bin/wine64
 ```
+
+
 
 1. Clone the repository with this command:
 ```bash
