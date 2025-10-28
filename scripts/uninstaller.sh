@@ -9,16 +9,16 @@ main() {
     
     notify-send "Photoshop CC" "photoshop uninstaller started" -i "photoshop"
 
-    ask_question "you are uninstalling photoshop cc v19 are you sure?" "N"
+    ask_question "Uninstalling photoshop CC 2018. Are you sure?" "N"
     if [ $result == "no" ];then
-        echo "Ok good Bye :)"
+        echo "Uninstalling..."
         exit 0
     fi
     
     #remove photoshop directory
     if [ -d "$SCR_PATH" ];then
-        echo "remove photoshop directory..."
-        rm -r "$SCR_PATH" || error2 "couldn't remove photoshop directory"
+        echo "Removing photoshop directory..."
+        rm -r "$SCR_PATH" || error2 "Couldn't remove photoshop directory"
         sleep 4
     else
         echo "photoshop directory Not Found!"
@@ -27,17 +27,17 @@ main() {
     
     #Unlink command 
     if [ -L "$CMD_PATH" ];then
-        echo "remove launcher command..."
-        sudo unlink "$CMD_PATH" || error2 "couldn't remove launcher command"
+        echo "Removing launcher command..."
+        sudo unlink "$CMD_PATH" || error2 "Couldn't remove launcher command"
     else
-        echo "launcher command Not Found!"
+        echo "Launcher command Not Found!"
     fi
 
     #delete desktop entry
     if [ -f "$ENTRY_PATH" ];then
-        echo "remove desktop entry...."
+        echo "Removing desktop entry...."
         echo "$SCR_PATH"
-        rm "$ENTRY_PATH" || error2 "couldn't remove desktop entry"
+        rm "$ENTRY_PATH" || error2 "Couldn't remove desktop entry"
     else
         echo "desktop entry Not Found!"
     fi
